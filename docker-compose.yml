@@ -1,10 +1,16 @@
 services:
-  app:
+  back:
     build: ./back
     volumes:
       - ./back:/app
       - /app/node_modules
     ports:
-      - "3007:3000"
+      - "3008:3000"
     environment:
       - NODE_ENV=development
+  front:
+    build: ./front
+    ports:
+      - "8080:80"
+    volumes:
+      - ./front/public:/usr/share/nginx/html:ro

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.start-button {
+  display: flex;
+  width: 384px;
+  height: 88px;
+  margin: 88px auto;
+  color: var(--white-color);
+  font-size: var(--h1);
+  background: var(--main-light-color);
+  align-items: center;
+  justify-content: center;
+  border-radius: 44px;
+}
