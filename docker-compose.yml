@@ -13,4 +13,4 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./front/public:/usr/share/nginx/html:ro
+      - ./front:/usr/share/nginx/html:ro
