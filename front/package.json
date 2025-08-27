@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass styles:public/dist/css",
-    "sass:watch": "sass --watch styles:public/dist/css"
+    "sass": "sass styles:public/dist/css components:public/dist/css/components",
+    "sass:watch": "sass --watch styles:public/dist/css components:public/dist/css/components"
   },
   "keywords": [],
   "author": "",
