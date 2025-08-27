@@ -2,10 +2,10 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "None",
-    "outDir": "public/dist",
+    "outDir": "public/dist/js",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
-  "include": ["scripts", "public/dist"]
+  "include": ["scripts", "public/dist/js"]
 }

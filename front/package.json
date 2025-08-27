@@ -7,13 +7,16 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles:public/dist/css",
+    "sass:watch": "sass --watch styles:public/dist/css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "sass": "^1.91.0",
     "typescript": "^5.9.2"
   }
 }
