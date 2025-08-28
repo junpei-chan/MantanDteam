@@ -8,8 +8,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass styles:public/dist/css components:public/dist/css/components",
-    "sass:watch": "sass --watch styles:public/dist/css components:public/dist/css/components"
+    "sass": "sass app/templates/start/src:app/templates/start/dist components/src:components/dist",
+    "sass:watch": "sass --watch app/templates/start/src:app/templates/start/dist && sass --watch components/src:components/dist",
+    "build:start": "tsc --project app/templates/start/src/tsconfig.json",
+    "build:all": "node scripts/build-all.js"
   },
   "keywords": [],
   "author": "",

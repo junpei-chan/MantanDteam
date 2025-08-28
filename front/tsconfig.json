@@ -2,14 +2,18 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "None",
-    "outDir": "public/dist/js",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
   "include": [
-    "scripts",
-    "public/dist/js",
-    "components"
+    "scripts/**/*.ts",
+    "components/**/*.ts",
+    "app/templates/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "**/dist",
+    "**/dist/**"
   ]
 }
