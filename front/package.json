@@ -11,7 +11,8 @@
     "sass": "sass app/templates/start/src:app/templates/start/dist components/src:components/dist",
     "sass:watch": "sass --watch app/templates/start/src:app/templates/start/dist && sass --watch components/src:components/dist",
     "build:start": "tsc --project app/templates/start/src/tsconfig.json",
-    "build:all": "node scripts/build-all.js"
+  "build:all": "node scripts/build-all.js",
+  "watch:all": "node scripts/watch-all.js"
   },
   "keywords": [],
   "author": "",
