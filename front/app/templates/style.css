@@ -1,0 +1,37 @@
+@charset "UTF-8";
+:root {
+  /* ========== ↓ カラー ↓ ========== */
+  --white-color: #FCFCFC;
+  --black-color: #131213;
+  --gray-900: #1F1E1E;
+  --gray-800: #2E2D2D;
+  --gray-700: #3B3A3A;
+  --gray-600: #414141;
+  --gray-500: #4F4E4E;
+  --gray-400: #868686;
+  --gray-300: #B1B1B1;
+  --gray-200: #D2D2D2;
+  --gray-100: #E8E8E8;
+  --main-dark-color: #0F57A2;
+  --main-color: #3674B5;
+  --main-light-color: #578FCA;
+  --accent-dark-color: #E3B839;
+  --accent-color: #FADA7A;
+  --accent-light-color: #F5F0CD;
+  /* ========== ↓ フォントサイズ ↓ ========== */
+  --h1: 32px;
+  --h2: 24px;
+  --h3: 20px;
+  --normal: 16px;
+  --medium: 14px;
+  --small: 12px;
+}
+
+body {
+  font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

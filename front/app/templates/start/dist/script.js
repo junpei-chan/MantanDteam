@@ -18,4 +18,4 @@ function FetchLangSwitchMenu(id, path) {
         }
     });
 }
-FetchLangSwitchMenu("LangSwitchMenu", "../../../components/features/start/lang-switch-menu.html");
+FetchLangSwitchMenu("LangSwitchMenu", "../../../../components/features/start/lang-switch-menu/index.html");

@@ -8,4 +8,4 @@ async function FetchLangSwitchMenu(id: string, path: string) {
   }
 }
 
-FetchLangSwitchMenu("LangSwitchMenu", "../../../components/features/start/lang-switch-menu.html")
+FetchLangSwitchMenu("LangSwitchMenu", "../../../../components/features/start/lang-switch-menu/index.html")
