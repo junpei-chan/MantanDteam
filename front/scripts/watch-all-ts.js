@@ -2,14 +2,18 @@ const { spawn } = require('child_process');
 const { readdirSync, statSync } = require('fs');
 const { join } = require('path');
 
-// src/tsconfig.json を再帰的に全て探す
+
+// src/tsconfig.json または app/templates/tsconfig.json を全て探す
 function findTsconfigs(dir) {
   let results = [];
   for (const file of readdirSync(dir)) {
     const fullPath = join(dir, file);
     if (statSync(fullPath).isDirectory()) {
       results = results.concat(findTsconfigs(fullPath));
-    } else if (file === 'tsconfig.json' && /\/src\//.test(fullPath)) {
+    } else if (
+      file === 'tsconfig.json' &&
+      (/\/src\//.test(fullPath) || /app\/templates\/tsconfig\.json$/.test(fullPath))
+    ) {
       results.push(fullPath);
     }
   }
