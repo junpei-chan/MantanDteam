@@ -1,11 +1,14 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
 .start-button {
   display: flex;
   width: 384px;
   height: 88px;
   margin: 88px auto;
-  color: var(--white-color);
-  font-size: var(--h1);
-  background: var(--main-light-color);
+  color: #FCFCFC;
+  font-size: 32px;
+  background: #3674B5;
   align-items: center;
   justify-content: center;
   border-radius: 44px;

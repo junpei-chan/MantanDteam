@@ -1,3 +1,32 @@
-
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ← 頭悪すぎてしぬ */
+.lang-switch-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 944px;
+  margin: 0 auto;
+  color: #131213;
+  background-color: #3B3A3A;
+  border-radius: 16px;
+  padding: 16px 24px;
+}
+.lang-switch-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: #D2D2D2;
+  font-size: 24px;
+  padding: 16px 0;
+  border-radius: 32px;
+}
+.lang-switch-menu button.active {
+  background: #578FCA;
+  color: #FCFCFC;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -15,9 +15,11 @@ function loadHead(path) {
         // HTML文字列を一時的にDOM化
         const temp = document.createElement("div");
         temp.innerHTML = html;
-        // head に追加
-        Array.from(temp.children).forEach(el => {
-            document.head.appendChild(el);
+        // head に追加（タグを問わず全て追加）
+        Array.from(temp.childNodes).forEach(el => {
+            if (el.nodeType === Node.ELEMENT_NODE) {
+                document.head.appendChild(el);
+            }
         });
     });
 }

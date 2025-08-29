@@ -1,0 +1,30 @@
+@import "../../../../../app/templates/_variables"; /* ← 頭悪すぎてしぬ */
+
+.lang-switch-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 944px;
+  margin: 0 auto;
+  color: $black-color;
+  background-color: $gray-700;
+  border-radius: 16px;
+  padding: 16px 24px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: $gray-200;
+    font-size: $h2;
+    padding: 16px 0;
+    border-radius: 32px;
+
+    &.active {
+      background: $main-light-color;
+      color: $white-color;
+    }
+  }
+}
