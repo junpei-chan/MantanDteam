@@ -10,9 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sh -c 'sass app/templates/*/src:app/templates/*/dist components/features/*/*/src:components/features/*/*/dist'",
     "sass:watch": "sh scripts/watch-all-sass.sh",
-    "build:start": "tsc --project app/templates/start/src/tsconfig.json",
-    "build:all": "node scripts/build-all.js",
-    "watch:all": "node scripts/watch-all.js"
+    "watch:all-ts": "node scripts/watch-all-ts.js"
   },
   "keywords": [],
   "author": "",
