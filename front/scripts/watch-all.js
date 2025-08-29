@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// front配下の全てのsrc/tsconfig.jsonを再帰的に探索
+
 function findTsconfigs(dir) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -14,8 +14,8 @@ function findTsconfigs(dir) {
     const stat = fs.statSync(filePath);
     if (stat && stat.isDirectory()) {
       results = results.concat(findTsconfigs(filePath));
-    } else if (file === 'tsconfig.json' && filePath.includes('/src/')) {
-      // src配下のtsconfig.jsonのみ対象
+    } else if (file === 'tsconfig.json' && (filePath.includes('/src/') || filePath.includes('app/templates/tsconfig.json'))) {
+      // src配下またはapp/templates直下のtsconfig.jsonも対象
       results.push(path.relative(process.cwd(), filePath));
     }
   });
