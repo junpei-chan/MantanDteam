@@ -2,10 +2,12 @@
   "extends": "../../../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../dist",
-    "rootDir": "."
+    "rootDir": "../../../../",
+    "module": "esnext",
+    "target": "es6"
   },
   "include": [
-    "./**/*.ts"
+    "../../../**/*.ts"
   ],
   "exclude": [
     "../dist"

@@ -9,7 +9,8 @@
   "include": [
     "scripts/**/*.ts",
     "components/**/*.ts",
-    "app/templates/**/*.ts"
+    "app/templates/**/*.ts",
+    "lib/utils/**/*.ts"
   ],
   "exclude": [
     "dist",

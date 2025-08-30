@@ -1,11 +1,7 @@
-async function FetchLangSwitchMenu(id: string, path: string) {
-  const container = document.getElementById(id);
+import { FetchComponent } from "../../../../lib/utils/fetch-component";
 
-  if (container) {
-    const res = await fetch(path);
-    const html = await res.text();
-    container.innerHTML = html;
-  }
-}
-
-FetchLangSwitchMenu("LangSwitchMenu", "../../../../components/features/start/lang-switch-menu/src/index.html")
+FetchComponent(
+  "LangSwitchMenuContainer", 
+  "/components/features/start/lang-switch-menu/src/index.html", 
+  "LangSwitchMenu"
+);
