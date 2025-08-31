@@ -1,5 +1,4 @@
 "use strict";
-console.log("script loaded");
 const langButtons = document.querySelectorAll(".lang-switch-menu button");
 langButtons.forEach(button => {
     button.addEventListener("click", () => {
