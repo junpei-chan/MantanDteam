@@ -1,4 +1,4 @@
-import { FetchComponent } from "../../../utils/fetch-component.js";
+import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 
 FetchComponent(
   "LangSwitchMenuContainer", 
