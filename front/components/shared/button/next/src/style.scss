@@ -1,0 +1,14 @@
+@import "../../../../../app/templates/variables";
+
+.next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: $main-color;
+  color: $white-color;
+  font-size: $normal;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
+}
