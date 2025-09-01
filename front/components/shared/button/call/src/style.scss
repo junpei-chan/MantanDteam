@@ -1,14 +1,14 @@
 @import "../../../../../app/templates/variables";
 
-.add-cart-button {
+.call-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 168px;
+  width: 120px;
   height: 60px;
-  background: $main-color;
-  color: $white-color;
-  font-size: $normal;
+  background: $white-color;
+  color: $black-color;
+  font-size: $medium;
   border-radius: 8px;
   box-shadow: $drop-shadow-small;
 }

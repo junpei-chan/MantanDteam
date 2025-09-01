@@ -2,15 +2,15 @@
 /* ========== ↓ カラー ↓ ========== */
 /* ========== ↓ フォントサイズ ↓ ========== */
 /* ========== ↓ ドロップシャドウ ↓ ========== */
-.back-button {
+.call-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 120px;
   height: 60px;
-  background: #E8E8E8;
+  background: #FCFCFC;
   color: #131213;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 8px;
   box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
 }
