@@ -31,3 +31,10 @@ $h3: 20px;
 $normal: 16px;
 $medium: 14px;
 $small: 12px;
+
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+
+$drop-shadow-bottom: 0px 2px 5px rgba(85, 85, 85, 0.25);
+$drop-shadow-bottom__dark: 0px 2px 5px rgba(0, 0, 0, 0.25);
+$drop-shadow-small: 0px 2px 1px rgba(85, 85, 85, 0.25);
+$drop-shadow-small__dark: 0px 2px 2px rgba(0, 0, 0, 0.25);
