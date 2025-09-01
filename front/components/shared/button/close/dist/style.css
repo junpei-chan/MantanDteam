@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 120px;
+  height: 60px;
+  background: #E8E8E8;
+  color: #131213;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+
+/*# sourceMappingURL=style.css.map */
