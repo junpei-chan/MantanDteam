@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.category-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.category-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 912px;
+  gap: 32px;
+}
+.category-items li {
+  position: relative;
+  width: 440px;
+  height: 200px;
+  color: #FCFCFC;
+  font-size: 32px;
+  background: url("../../../../assets/images/category-launch.png") no-repeat center center; /* 背景は仮で全てランチの画像 */
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+.category-items li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.category-item-title {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0 0 0 24px;
+  border-radius: 0 0 20px 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
