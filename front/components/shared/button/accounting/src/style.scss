@@ -1,0 +1,14 @@
+@import "../../../../../app/templates/variables";
+
+.accounting-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: $white-color;
+  color: $black-color;
+  font-size: $normal;
+  box-shadow: $drop-shadow-small;
+  border-radius: 8px;
+}
