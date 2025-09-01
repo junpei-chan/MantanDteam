@@ -1,0 +1,14 @@
+@import "../../../../../app/templates/variables";
+
+.cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: $gray-100;
+  color: $black-color;
+  font-size: $normal;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
+}
