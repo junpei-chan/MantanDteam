@@ -1,0 +1,13 @@
+@import "../../../../../app/templates/variables";
+
+.add-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 60px;
+  background: $main-color;
+  color: $white-color;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
+}

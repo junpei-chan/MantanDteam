@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.add-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 60px;
+  background: #3674B5;
+  color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+
+/*# sourceMappingURL=style.css.map */
