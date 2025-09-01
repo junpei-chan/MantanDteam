@@ -1,5 +1,5 @@
 #!/bin/zsh
-for src in app/templates/style.scss app/templates/*/src components/features/*/*/src; do
+for src in app/templates/style.scss app/templates/*/src components/features/*/*/src components/shared/*/*/src; do
   if [ "$src" = "app/templates/style.scss" ]; then
     mkdir -p app/templates/dist
     npx sass --watch "$src":"app/templates/dist/style.css" &
