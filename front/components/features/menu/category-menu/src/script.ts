@@ -33,7 +33,22 @@ function updateSubCategories() {
   if (!activeMainCategory) return;
 
   const key = activeMainCategory.innerHTML as CategoryKey;
-  subCategoryItems.forEach((item, index) => {
-    item.innerHTML = categories[key][index];
+  const subCats = categories[key] || [];
+  const subCategoryList = document.querySelector(".sub-category ul");
+  if (!subCategoryList) return;
+
+  // sub-categoryのliを一旦全て削除
+  subCategoryList.innerHTML = "";
+
+  // categories[key]の数だけliを生成
+  subCats.forEach((name, i) => {
+    const li = document.createElement("li");
+    li.textContent = name;
+    if (i === 0) li.classList.add("active");
+    li.addEventListener("click", () => {
+      subCategoryList.querySelectorAll("li").forEach(i => i.classList.remove("active"));
+      li.classList.add("active");
+    });
+    subCategoryList.appendChild(li);
   });
 }
