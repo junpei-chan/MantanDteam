@@ -12,7 +12,7 @@ if (container) {
     FetchComponent(
       li.id,
       "/components/features/menu/menu-item/src/index.html",
-      "MenuItem"
+      "TakeoutMenuItem"
     );
   }
 }

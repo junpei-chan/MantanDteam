@@ -1,6 +1,7 @@
 @import "../../../../../app/templates/_variables";
 
 .menu-item {
+  position: relative;
   width: 20vw;
   height: 25vh;
   color: $black-color;
@@ -16,6 +17,21 @@
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+  }
+
+  span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 76px;
+    right: 8px;
+    width: 96px;
+    height: 28px;
+    background: $accent-color;
+    border-radius: 8px;
+    font-size: $small;
+    color: $black-color;
   }
 
   .menu-item-contents {

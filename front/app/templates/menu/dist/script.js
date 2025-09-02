@@ -6,7 +6,7 @@ if (container) {
         const li = document.createElement("li");
         li.id = `MenuItem${i}`;
         container.appendChild(li);
-        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "MenuItem");
+        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "TakeoutMenuItem");
     }
 }
 FetchComponent("TakeoutBtnContainer", "/components/shared/button/takeout/src/index.html", "TakeoutBtn");
