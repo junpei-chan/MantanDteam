@@ -8,11 +8,15 @@
   justify-content: center;
   width: 120px;
   height: 60px;
-  background: #0F57A2;
-  color: #FCFCFC;
+  background: #FCFCFC;
+  color: #131213;
   font-size: 16px;
   border-radius: 8px;
   box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+.takeout-button.active {
+  background: #0F57A2;
+  color: #FCFCFC;
 }
 
 /*# sourceMappingURL=style.css.map */

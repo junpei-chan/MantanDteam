@@ -6,9 +6,14 @@
   justify-content: center;
   width: 120px;
   height: 60px;
-  background: $main-dark-color;
-  color: $white-color;
+  background: $white-color;
+  color: $black-color;
   font-size: $normal;
   border-radius: 8px;
   box-shadow: $drop-shadow-small;
+
+  &.active {
+    background: $main-dark-color;
+    color: $white-color;
+  }
 }
