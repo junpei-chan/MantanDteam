@@ -1,5 +1,22 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 
+const menuItemCount = 5;
+const container = document.getElementById("MenuItemContainer");
+
+if (container) {
+  for (let i = 0; i < menuItemCount; i++) {
+    const li = document.createElement("li");
+    li.id = `MenuItem${i}`;
+    container.appendChild(li);
+
+    FetchComponent(
+      li.id,
+      "/components/features/menu/menu-item/src/index.html",
+      "MenuItem"
+    );
+  }
+}
+
 FetchComponent(
   "TakeoutBtnContainer", 
   "/components/shared/button/takeout/src/index.html", 
@@ -34,10 +51,4 @@ FetchComponent(
   "CategoryMenuContainer", 
   "/components/features/menu/category-menu/src/index.html", 
   "CategoryMenu"
-);
-
-FetchComponent(
-  "MenuItemsContainer", 
-  "/components/features/menu/menu-item/src/index.html", 
-  "MenuItem"
 );

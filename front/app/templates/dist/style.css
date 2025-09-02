@@ -3,11 +3,16 @@
 /* ========== ↓ フォントサイズ ↓ ========== */
 /* ========== ↓ ドロップシャドウ ↓ ========== */
 body {
+  height: 100vh;
   background: #FCFCFC;
   font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+main {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
