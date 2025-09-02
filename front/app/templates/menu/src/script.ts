@@ -1,6 +1,6 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 
-const menuItemCount = 5;
+const menuItemCount = 6;
 const container = document.getElementById("MenuItemContainer");
 
 if (container) {
@@ -51,4 +51,10 @@ FetchComponent(
   "CategoryMenuContainer", 
   "/components/features/menu/category-menu/src/index.html", 
   "CategoryMenu"
+);
+
+FetchComponent(
+  "TakeoutCategoryMenuContainer", 
+  "/components/features/menu/category-menu/src/index.html", 
+  "TakeoutCategoryMenu"
 );

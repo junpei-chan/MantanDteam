@@ -13,6 +13,9 @@
 .category-menu li {
   cursor: pointer;
 }
+.category-menu.hidden {
+  display: none;
+}
 
 .main-category ul {
   gap: 8px;

@@ -1,5 +1,5 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
-const menuItemCount = 5;
+const menuItemCount = 6;
 const container = document.getElementById("MenuItemContainer");
 if (container) {
     for (let i = 0; i < menuItemCount; i++) {
@@ -15,3 +15,4 @@ FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.htm
 FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.html", "OrderBtn");
 FetchComponent("OrderHistoryBtnContainer", "/components/shared/button/order-history/src/index.html", "OrderHistoryBtn");
 FetchComponent("CategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "CategoryMenu");
+FetchComponent("TakeoutCategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "TakeoutCategoryMenu");
