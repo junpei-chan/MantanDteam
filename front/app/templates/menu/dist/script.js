@@ -1,15 +1,47 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 const menuItemCount = 6;
-const container = document.getElementById("MenuItemContainer");
-if (container) {
+let isTakeoutMode = false;
+function switchMenuItemsToTakeout() {
+    for (let i = 0; i < menuItemCount; i++) {
+        const liId = `MenuItem${i}`;
+        FetchComponent(liId, "/components/features/menu/menu-item/src/index.html", "TakeoutMenuItem").then(() => {
+            const li = document.getElementById(liId);
+            if (li) {
+                li.className = "menu-item";
+            }
+        });
+    }
+}
+function toggleMenuItems() {
+    isTakeoutMode = !isTakeoutMode;
+    for (let i = 0; i < menuItemCount; i++) {
+        const liId = `MenuItem${i}`;
+        FetchComponent(liId, "/components/features/menu/menu-item/src/index.html", isTakeoutMode ? "TakeoutMenuItem" : "MenuItem");
+    }
+}
+function renderMenuItems() {
+    const container = document.getElementById("MenuItemContainer");
+    if (!container)
+        return;
+    container.innerHTML = "";
     for (let i = 0; i < menuItemCount; i++) {
         const li = document.createElement("li");
         li.id = `MenuItem${i}`;
         container.appendChild(li);
-        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "TakeoutMenuItem");
+        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "MenuItem");
     }
 }
-FetchComponent("TakeoutBtnContainer", "/components/shared/button/takeout/src/index.html", "TakeoutBtn");
+document.addEventListener("DOMContentLoaded", () => {
+    renderMenuItems();
+});
+FetchComponent("TakeoutBtnContainer", "/components/shared/button/takeout/src/index.html", "TakeoutBtn").then(() => {
+    const takeoutBtn = document.getElementById("TakeoutBtn");
+    if (takeoutBtn) {
+        takeoutBtn.addEventListener("click", () => {
+            toggleMenuItems();
+        });
+    }
+});
 FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/src/index.html", "AccountingBtn");
 FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn");
 FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.html", "OrderBtn");

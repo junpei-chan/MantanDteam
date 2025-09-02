@@ -1,27 +1,70 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 
 const menuItemCount = 6;
-const container = document.getElementById("MenuItemContainer");
+let isTakeoutMode = false;
 
-if (container) {
+function switchMenuItemsToTakeout() {
+  for (let i = 0; i < menuItemCount; i++) {
+    const liId = `MenuItem${i}`;
+    FetchComponent(
+      liId,
+      "/components/features/menu/menu-item/src/index.html",
+      "TakeoutMenuItem"
+    ).then(() => {
+      const li = document.getElementById(liId);
+      if (li) {
+        li.className = "menu-item";
+      }
+    });
+  }
+}
+
+function toggleMenuItems() {
+  isTakeoutMode = !isTakeoutMode;
+  for (let i = 0; i < menuItemCount; i++) {
+    const liId = `MenuItem${i}`;
+    FetchComponent(
+      liId,
+      "/components/features/menu/menu-item/src/index.html",
+      isTakeoutMode ? "TakeoutMenuItem" : "MenuItem"
+    );
+  }
+}
+
+function renderMenuItems() {
+  const container = document.getElementById("MenuItemContainer");
+  if (!container) return;
+
+  container.innerHTML = "";
+  
   for (let i = 0; i < menuItemCount; i++) {
     const li = document.createElement("li");
     li.id = `MenuItem${i}`;
     container.appendChild(li);
-
     FetchComponent(
       li.id,
       "/components/features/menu/menu-item/src/index.html",
-      "TakeoutMenuItem"
+      "MenuItem"
     );
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderMenuItems();
+});
 
 FetchComponent(
   "TakeoutBtnContainer", 
   "/components/shared/button/takeout/src/index.html", 
   "TakeoutBtn"
-);
+).then(() => {
+  const takeoutBtn = document.getElementById("TakeoutBtn");
+  if (takeoutBtn) {
+    takeoutBtn.addEventListener("click", () => {
+  toggleMenuItems();
+    });
+  }
+});
 
 FetchComponent(
   "AccountingBtnContainer", 
