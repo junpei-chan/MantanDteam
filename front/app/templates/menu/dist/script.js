@@ -4,3 +4,4 @@ FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/s
 FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn");
 FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.html", "OrderBtn");
 FetchComponent("OrderHistoryBtnContainer", "/components/shared/button/order-history/src/index.html", "OrderHistoryBtn");
+FetchComponent("CategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "CategoryMenu");

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.category-menu {
+  width: calc(100% - 188px);
+  height: 188px;
+  background: #FCFCFC;
+}
+.category-menu ul {
+  display: flex;
+}
+.category-menu li {
+  cursor: pointer;
+}
+
+.main-category ul {
+  gap: 8px;
+  padding: 8px 8px 0 8px;
+  color: #131213;
+  font-size: 16px;
+}
+.main-category ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  height: 80px;
+  background: #FCFCFC;
+  border-top: solid 2.5px #868686;
+  border-right: solid 2.5px #868686;
+  border-left: solid 2.5px #868686;
+  border-radius: 8px 8px 0 0;
+}
+.main-category ul li.active {
+  border: none;
+  background: #3674B5;
+  color: #FCFCFC;
+}
+
+.sub-category {
+  display: flex;
+  align-items: center;
+  height: 96px;
+  background: #3674B5;
+  color: #131213;
+  font-size: 14px;
+}
+.sub-category ul {
+  gap: 16px;
+  padding: 16px 20px;
+}
+.sub-category ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 64px;
+  background: #E8E8E8;
+  border-radius: 12px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+.sub-category ul li.active {
+  background: #0F57A2;
+  color: #FCFCFC;
+}
+
+/*# sourceMappingURL=style.css.map */

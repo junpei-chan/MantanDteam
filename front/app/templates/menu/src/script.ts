@@ -29,3 +29,9 @@ FetchComponent(
   "/components/shared/button/order-history/src/index.html", 
   "OrderHistoryBtn"
 );
+
+FetchComponent(
+  "CategoryMenuContainer", 
+  "/components/features/menu/category-menu/src/index.html", 
+  "CategoryMenu"
+);
