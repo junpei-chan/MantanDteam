@@ -2,6 +2,7 @@
 /* ========== ↓ カラー ↓ ========== */
 /* ========== ↓ フォントサイズ ↓ ========== */
 /* ========== ↓ ドロップシャドウ ↓ ========== */
+/* ========== ↓ order-basket ↓ ========== */
 .order-basket {
   position: absolute;
   top: 0;
@@ -67,6 +68,21 @@
   padding: 18px 0;
   border-top: solid 1px #B1B1B1;
   background: #FCFCFC;
+}
+
+/* ========== ↓ footer ↓ ========== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+  padding: 0 24px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 188px);
+  height: 96px;
+  background: #3674B5;
 }
 
 /*# sourceMappingURL=style.css.map */
