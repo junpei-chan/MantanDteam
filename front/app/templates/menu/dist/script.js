@@ -1,17 +1,6 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 const menuItemCount = 6;
 let isTakeoutMode = false;
-function switchMenuItemsToTakeout() {
-    for (let i = 0; i < menuItemCount; i++) {
-        const liId = `MenuItem${i}`;
-        FetchComponent(liId, "/components/features/menu/menu-item/src/index.html", "TakeoutMenuItem").then(() => {
-            const li = document.getElementById(liId);
-            if (li) {
-                li.className = "menu-item";
-            }
-        });
-    }
-}
 function toggleMenuItems() {
     isTakeoutMode = !isTakeoutMode;
     for (let i = 0; i < menuItemCount; i++) {
