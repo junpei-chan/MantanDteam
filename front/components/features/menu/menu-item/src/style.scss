@@ -1,0 +1,26 @@
+@import "../../../../../app/templates/_variables";
+
+.menu-item {
+  width: 280px;
+  height: 220px;
+  color: $black-color;
+  font-size: $medium;
+  border-radius: 12px;
+  box-shadow: $drop-shadow-bottom__dark;
+
+  img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .menu-item-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    gap: 12px;
+  }
+}

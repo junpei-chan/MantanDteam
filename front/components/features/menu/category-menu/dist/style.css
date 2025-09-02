@@ -4,7 +4,7 @@
 /* ========== ↓ ドロップシャドウ ↓ ========== */
 .category-menu {
   width: calc(100% - 188px);
-  height: 188px;
+  height: 184px;
   background: #FCFCFC;
 }
 .category-menu ul {

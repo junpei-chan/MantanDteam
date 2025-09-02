@@ -35,3 +35,9 @@ FetchComponent(
   "/components/features/menu/category-menu/src/index.html", 
   "CategoryMenu"
 );
+
+FetchComponent(
+  "MenuItemsContainer", 
+  "/components/features/menu/menu-item/src/index.html", 
+  "MenuItem"
+);
