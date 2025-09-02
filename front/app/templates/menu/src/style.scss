@@ -1,0 +1,71 @@
+@import "../../_variables";
+
+.order-basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 188px;
+  height: 100vh;
+  background: $white-color;
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0 0 0;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.order-basket-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  background: $gray-700;
+  color: $white-color;
+  font-size: $h2;
+  box-shadow: $drop-shadow-bottom;
+}
+
+.order-basket-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: calc(100% - 96px);
+  border-left: solid 1px $gray-300;
+}
+
+.order-basket-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0 0 0 8px;
+  gap: 12px;
+  width: 160px;
+  min-height: 80px;
+  background: $white-color;
+  border-bottom: solid 1.5px $gray-300;
+  overflow: hidden;
+
+  p:nth-of-type(1) {
+    font-size: $h3;
+  }
+}
+
+.order-basket-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 18px 0;
+  border-top: solid 1px $gray-300;
+  background: $white-color;
+}

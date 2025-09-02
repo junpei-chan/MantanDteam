@@ -1,4 +1,9 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
 body {
+  background: #FCFCFC;
   font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
