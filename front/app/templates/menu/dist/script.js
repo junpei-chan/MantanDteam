@@ -37,3 +37,4 @@ FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.h
 FetchComponent("OrderHistoryBtnContainer", "/components/shared/button/order-history/src/index.html", "OrderHistoryBtn");
 FetchComponent("CategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "CategoryMenu");
 FetchComponent("TakeoutCategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "TakeoutCategoryMenu");
+FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detail-modal/src/index.html", "MenuDetailModal");

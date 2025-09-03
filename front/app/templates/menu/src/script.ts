@@ -86,3 +86,9 @@ FetchComponent(
   "/components/features/menu/category-menu/src/index.html", 
   "TakeoutCategoryMenu"
 );
+
+FetchComponent(
+  "MenuDetailModalContainer", 
+  "/components/features/menu/menu-detail-modal/src/index.html", 
+  "MenuDetailModal"
+);
