@@ -166,6 +166,13 @@
   margin-top: 48px;
 }
 
+/*  
+  components内から別のコンポーネントを呼び出せなかったので
+  ここにボタンのスタイル書いてます
+
+  TODO: ↑これなんとかしろ
+*/
+
 .close-button {
   display: flex;
   align-items: center;
