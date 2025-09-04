@@ -3,7 +3,90 @@
 /* ========== ↓ フォントサイズ ↓ ========== */
 /* ========== ↓ ドロップシャドウ ↓ ========== */
 .menu-detail-modal {
-  position: fixed;
+  width: 1000px;
+  height: 600px;
+  background: #FCFCFC;
+  border-radius: 20px;
+  padding: 16px 42px 32px 16px;
+}
+
+.menu-detail-stepbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 520px;
+  height: 104px;
+  margin: 0 auto 32px auto;
+  z-index: 1;
+}
+.menu-detail-stepbar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-detail-stepbar div img {
+  width: 32px;
+  height: 16px;
+}
+.menu-detail-stepbar div button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: #FCFCFC;
+  border: solid 3px #3B3A3A;
+  text-align: center;
+  margin: 8px 0 16px 0;
+}
+.menu-detail-stepbar div button > img {
+  display: none;
+}
+.menu-detail-stepbar div.current button {
+  background: #0F57A2;
+  border: solid 3px #0F57A2;
+  color: #FCFCFC;
+}
+.menu-detail-stepbar div:not(.current):not(.completed) img {
+  display: none;
+}
+.menu-detail-stepbar div:not(.current):not(.completed) button {
+  margin-top: 24px;
+}
+.menu-detail-stepbar div.completed button {
+  background: #0F57A2;
+  border: solid 3px #0F57A2;
+}
+.menu-detail-stepbar div.completed button img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+.menu-detail-stepbar div.completed button span {
+  display: none;
+}
+.menu-detail-stepbar::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  left: 64px;
+  width: 416px;
+  height: 5px;
+  background: #3B3A3A;
+  border-radius: 2.5px;
+  z-index: -1;
+}
+
+.menu-detail-contents img {
+  width: 420px;
+  height: 230px;
+  border-radius: 16px;
+}
+
+.allergies-info img {
+  width: 32px !important;
+  height: 32px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

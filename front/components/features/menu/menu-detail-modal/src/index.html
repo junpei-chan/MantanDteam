@@ -14,22 +14,37 @@
 <body>
   <div id="MenuDetailModal" class="menu-detail-modal">
     <div>
-      <div>
-        <div>
+      <div class="menu-detail-stepbar">
+        <div class="current">
           <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
-          <button>1</button>
+
+          <button id="menuSelect">
+            <span>1</span>
+            <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+          </button>
+
           <label for="menuSelect">メニュー選択</label>
         </div>
 
         <div>
-          <!-- <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon"> -->
-          <button>2</button>
+          <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
+
+          <button id="optionSelect">
+            <span>2</span>
+            <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+          </button>
+
           <label for="optionSelect">オプション選択</label>
         </div>
 
         <div>
-          <!-- <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon"> -->
-          <button>3</button>
+          <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
+
+          <button id="quantitySelect">
+            <span>3</span>
+            <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+          </button>
+
           <label for="quantitySelect">数量選択</label>
         </div>
       </div>
@@ -37,7 +52,7 @@
       <div id="CloseBtnContainer"></div>
     </div>
 
-    <div>
+    <div class="menu-detail-contents">
       <div>
         <img src="/assets/images/menu-item.webp" alt="menu-item">
 
@@ -56,7 +71,7 @@
           い、不思議とクセになるスイーツライスです。
         </p>
 
-        <div>
+        <div class="allergies-info">
           <p>アレルギー情報</p>
 
           <div>

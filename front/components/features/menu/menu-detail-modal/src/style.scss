@@ -1,5 +1,109 @@
 @import "../../../../../app/templates/_variables";
 
 .menu-detail-modal {
-  position: fixed;
+  width: 1000px;
+  height: 600px;
+  background: $white-color;
+  border-radius: 20px;
+  padding: 16px 42px 32px 16px;
+}
+
+.menu-detail-stepbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 520px;
+  height: 104px;
+  margin: 0 auto 32px auto;
+  z-index: 1;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 32px;
+      height: 16px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background: $white-color;
+      border: solid 3px $gray-700;
+      text-align: center;
+      margin: 8px 0 16px 0;
+    }
+
+    button>img {
+      display: none;
+    }
+
+    &.current {
+      button {
+        background: $main-dark-color;
+        border: solid 3px $main-dark-color;
+        color: $white-color;
+      }
+    }
+
+    &:not(.current):not(.completed) {
+      img {
+        display: none;
+      }
+
+      button {
+        margin-top: 24px;
+      }
+    }
+
+    &.completed {
+      button {
+        background: $main-dark-color;
+        border: solid 3px $main-dark-color;
+
+        img {
+          display: block;
+          width: 36px;
+          height: 36px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 64px;
+    width: 416px;
+    height: 5px;
+    background: $gray-700;
+    border-radius: 2.5px;
+    z-index: -1;
+  }
+}
+
+.menu-detail-contents {
+  img {
+    width: 420px;
+    height: 230px;
+    border-radius: 16px;
+  }
+}
+
+.allergies-info {
+  img {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }

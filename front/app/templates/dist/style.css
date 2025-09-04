@@ -19,4 +19,10 @@ main {
   height: 100%;
 }
 
+dialog {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
