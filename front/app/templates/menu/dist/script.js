@@ -31,10 +31,15 @@ FetchComponent("TakeoutBtnContainer", "/components/shared/button/takeout/src/ind
         });
     }
 });
+FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detail-modal/src/index.html", "MenuDetailModal").then(() => {
+    const dialog = document.getElementById("MenuDetailModalContainer");
+    if (dialog && typeof dialog.showModal === "function") {
+        dialog.showModal();
+    }
+});
 FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/src/index.html", "AccountingBtn");
 FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn");
 FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.html", "OrderBtn");
 FetchComponent("OrderHistoryBtnContainer", "/components/shared/button/order-history/src/index.html", "OrderHistoryBtn");
 FetchComponent("CategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "CategoryMenu");
 FetchComponent("TakeoutCategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "TakeoutCategoryMenu");
-FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detail-modal/src/index.html", "MenuDetailModal");
