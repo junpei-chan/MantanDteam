@@ -3,6 +3,10 @@
 /* ========== ↓ フォントサイズ ↓ ========== */
 /* ========== ↓ ドロップシャドウ ↓ ========== */
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   background: #FCFCFC;
   font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;

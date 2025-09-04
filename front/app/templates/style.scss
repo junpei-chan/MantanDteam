@@ -2,6 +2,10 @@
 @import "./_variables";
 
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   background: $white-color;
   font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
