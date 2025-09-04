@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
   <link rel="stylesheet" href="/components/features/menu/menu-detail-modal/dist/style.css">
-  <script src="/components/features/menu/menu-detail-modal/dist/script.js"></script>
+  <script type="module" src="/components/features/menu/menu-detail-modal/dist/script.js"></script>
   <title>マンタン</title>
 </head>
 <body>
@@ -49,21 +49,24 @@
         </div>
       </div>
 
-      <div id="CloseBtnContainer"></div>
+      <button class="close-button" id="CloseBtn">
+        閉じる
+        <img src="/assets/images/icons/close-icon.svg" alt="close-icon">
+      </button>
     </div>
 
     <div class="menu-detail-contents">
       <div>
         <img src="/assets/images/menu-item.webp" alt="menu-item">
 
-        <div>
+        <div class="menu-detail-title">
           <h3>少なめライス【喫茶店のプリン味】</h3>
-          <p>¥2,400 (税込 ¥2,640)</p>
+          <p><span>¥2,400</span> (税込 ¥2,640)</p>
         </div>
       </div>
 
       <div>
-        <p>
+        <p class="menu-detail-description">
           どこか懐かしい、あのプリンの甘さとほろ苦さを、デザー
           トにちょうど良い少なめライスで表現しました。しっとり
           濃厚なカスタードに、カラメルソースのアクセント。
@@ -74,7 +77,7 @@
         <div class="allergies-info">
           <p>アレルギー情報</p>
 
-          <div>
+          <div class="allergies-contents">
             <div>
               <img src="/assets/images/icons/allergies/egg.svg" alt="たまごのアイコン">
               <p>たまご</p>
@@ -88,9 +91,9 @@
       </div>
     </div>
 
-    <div>
-      <div id="BackBtnContainer"></div>
-      <div id="NextBtnContainer"></div>
+    <div class="menu-detail-buttons">
+      <button class="back-button" id="BackBtn">戻る</button>
+      <button class="next-button" id="NextBtn">次へ →</button>
     </div>
   </div>
 </body>

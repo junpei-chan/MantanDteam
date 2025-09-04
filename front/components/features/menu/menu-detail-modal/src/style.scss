@@ -5,7 +5,11 @@
   height: 600px;
   background: $white-color;
   border-radius: 20px;
-  padding: 16px 42px 32px 16px;
+  padding: 16px 42px 32px 42px;
+
+  >div:nth-of-type(1) {
+    display: flex;
+  }
 }
 
 .menu-detail-stepbar {
@@ -94,16 +98,110 @@
 }
 
 .menu-detail-contents {
+  display: flex;
+  gap: 76px;
+
   img {
     width: 420px;
     height: 230px;
     border-radius: 16px;
   }
+
+  .menu-detail-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 0 0 8px;
+    margin-top: 20px;
+    color: $black-color;
+
+    p {
+      color: $gray-700;
+    }
+
+    h3,span {
+      font-size: $h3;
+    }
+  }
+
+  .menu-detail-description {
+    color: $black-color;
+    font-size: $normal;
+    line-height: 24px;
+    margin-bottom: 62px;
+  }
+
+  .allergies-info {
+    .allergies-contents {
+      display: flex;
+      gap: 24px;
+      background: $white-color;
+      border: solid 1px $gray-300;
+      border-radius: 6px;
+      padding: 8px 16px;
+      margin: 24px 0 0 0;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
+      p {
+        font-size: $small;
+      }
+    }
+
+    img {
+      width: 32px !important;
+      height: 32px !important;
+    }
+  }
 }
 
-.allergies-info {
-  img {
-    width: 32px !important;
-    height: 32px !important;
-  }
+.menu-detail-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 120px;
+  height: 60px;
+  background: $gray-100;
+  color: $black-color;
+  font-size: $normal;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: $gray-100;
+  color: $black-color;
+  font-size: $normal;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
+}
+
+.next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: $main-color;
+  color: $white-color;
+  font-size: $normal;
+  border-radius: 8px;
+  box-shadow: $drop-shadow-small;
 }

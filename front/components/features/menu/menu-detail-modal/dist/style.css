@@ -7,7 +7,10 @@
   height: 600px;
   background: #FCFCFC;
   border-radius: 20px;
-  padding: 16px 42px 32px 16px;
+  padding: 16px 42px 32px 42px;
+}
+.menu-detail-modal > div:nth-of-type(1) {
+  display: flex;
 }
 
 .menu-detail-stepbar {
@@ -78,15 +81,102 @@
   z-index: -1;
 }
 
+.menu-detail-contents {
+  display: flex;
+  gap: 76px;
+}
 .menu-detail-contents img {
   width: 420px;
   height: 230px;
   border-radius: 16px;
 }
-
-.allergies-info img {
+.menu-detail-contents .menu-detail-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 0 0 8px;
+  margin-top: 20px;
+  color: #131213;
+}
+.menu-detail-contents .menu-detail-title p {
+  color: #3B3A3A;
+}
+.menu-detail-contents .menu-detail-title h3, .menu-detail-contents .menu-detail-title span {
+  font-size: 20px;
+}
+.menu-detail-contents .menu-detail-description {
+  color: #131213;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 62px;
+}
+.menu-detail-contents .allergies-info .allergies-contents {
+  display: flex;
+  gap: 24px;
+  background: #FCFCFC;
+  border: solid 1px #B1B1B1;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 24px 0 0 0;
+}
+.menu-detail-contents .allergies-info .allergies-contents div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.menu-detail-contents .allergies-info .allergies-contents p {
+  font-size: 12px;
+}
+.menu-detail-contents .allergies-info img {
   width: 32px !important;
   height: 32px !important;
+}
+
+.menu-detail-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 120px;
+  height: 60px;
+  background: #E8E8E8;
+  color: #131213;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: #E8E8E8;
+  color: #131213;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+
+.next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background: #3674B5;
+  color: #FCFCFC;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
 }
 
 /*# sourceMappingURL=style.css.map */
