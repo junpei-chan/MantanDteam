@@ -54,14 +54,15 @@ FetchComponent(
 FetchComponent(
   "MenuDetailModalContainer", 
   "/components/features/menu/menu-detail-modal/src/index.html", 
-  "MenuDetailModal"
+  "menuDetailModal"
 ).then(() => {
   const dialog = document.getElementById("MenuDetailModalContainer") as HTMLDialogElement | null;
   
   if (dialog && typeof dialog.showModal === "function") {
-    dialog.showModal();
+    dialog.close();
   }
 });
+
 
 FetchComponent(
   "AccountingBtnContainer", 

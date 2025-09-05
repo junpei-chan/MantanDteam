@@ -25,4 +25,8 @@ dialog {
   margin: 0;
 }
 
+dialog:not([open]) {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

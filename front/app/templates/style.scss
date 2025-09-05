@@ -23,3 +23,7 @@ dialog {
   min-height: 100vh;
   margin: 0;
 }
+
+dialog:not([open]) {
+  display: none;
+}

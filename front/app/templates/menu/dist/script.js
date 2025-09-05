@@ -31,10 +31,10 @@ FetchComponent("TakeoutBtnContainer", "/components/shared/button/takeout/src/ind
         });
     }
 });
-FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detail-modal/src/index.html", "MenuDetailModal").then(() => {
+FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detail-modal/src/index.html", "menuDetailModal").then(() => {
     const dialog = document.getElementById("MenuDetailModalContainer");
     if (dialog && typeof dialog.showModal === "function") {
-        dialog.showModal();
+        dialog.close();
     }
 });
 FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/src/index.html", "AccountingBtn");
