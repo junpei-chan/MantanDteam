@@ -6,7 +6,7 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
-  background: url(/assets/images/test-bg.jpg) no-repeat center center;
+  background: url(/assets/images/menu/menu-bg.jpg) no-repeat center center;
   background-size: cover;
 }
 
