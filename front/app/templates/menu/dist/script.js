@@ -50,6 +50,13 @@ FetchComponent("MenuDetailModalContainer", "/components/features/menu/menu-detai
     if (dialog && typeof dialog.showModal === "function") {
         dialog.close();
     }
+    if (dialog) {
+        dialog.addEventListener("click", (e) => {
+            if (e.target === dialog) {
+                dialog.close();
+            }
+        });
+    }
 });
 FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/src/index.html", "AccountingBtn");
 FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn");

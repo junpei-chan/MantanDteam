@@ -75,6 +75,14 @@ FetchComponent(
   if (dialog && typeof dialog.showModal === "function") {
     dialog.close();
   }
+
+  if (dialog) {
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) {
+        dialog.close();
+      }
+    });
+  }
 });
 
 
