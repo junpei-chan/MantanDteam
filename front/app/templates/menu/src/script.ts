@@ -3,16 +3,13 @@ import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 const menuItemCount = 6;
 let isTakeoutMode = false;
 
-function toggleMenuItems() {
-  isTakeoutMode = !isTakeoutMode;
-
-  for (let i = 0; i < menuItemCount; i++) {
-    const liId = `MenuItem${i}`;
-    FetchComponent(
-      liId,
-      "/components/features/menu/menu-item/src/index.html",
-      isTakeoutMode ? "TakeoutMenuItem" : "MenuItem"
-    );
+function bindMenuItemClick(liId: string) {
+  const item = document.getElementById(liId)?.firstElementChild as HTMLElement | null;
+  const modal = document.getElementById("MenuDetailModalContainer") as HTMLDialogElement | null;
+  if (item && modal) {
+    item.addEventListener("click", () => {
+      modal.showModal();
+    });
   }
 }
 
@@ -30,7 +27,24 @@ function renderMenuItems() {
       li.id,
       "/components/features/menu/menu-item/src/index.html",
       "MenuItem"
-    );
+    ).then(() => {
+      bindMenuItemClick(li.id);
+    });
+  }
+}
+
+function toggleMenuItems() {
+  isTakeoutMode = !isTakeoutMode;
+
+  for (let i = 0; i < menuItemCount; i++) {
+    const liId = `MenuItem${i}`;
+    FetchComponent(
+      liId,
+      "/components/features/menu/menu-item/src/index.html",
+      isTakeoutMode ? "TakeoutMenuItem" : "MenuItem"
+    ).then(() => {
+      bindMenuItemClick(liId);
+    });
   }
 }
 

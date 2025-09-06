@@ -1,11 +1,14 @@
 import { FetchComponent } from "../../../utils/dist/fetch-component.js";
 const menuItemCount = 6;
 let isTakeoutMode = false;
-function toggleMenuItems() {
-    isTakeoutMode = !isTakeoutMode;
-    for (let i = 0; i < menuItemCount; i++) {
-        const liId = `MenuItem${i}`;
-        FetchComponent(liId, "/components/features/menu/menu-item/src/index.html", isTakeoutMode ? "TakeoutMenuItem" : "MenuItem");
+function bindMenuItemClick(liId) {
+    var _a;
+    const item = (_a = document.getElementById(liId)) === null || _a === void 0 ? void 0 : _a.firstElementChild;
+    const modal = document.getElementById("MenuDetailModalContainer");
+    if (item && modal) {
+        item.addEventListener("click", () => {
+            modal.showModal();
+        });
     }
 }
 function renderMenuItems() {
@@ -17,7 +20,18 @@ function renderMenuItems() {
         const li = document.createElement("li");
         li.id = `MenuItem${i}`;
         container.appendChild(li);
-        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "MenuItem");
+        FetchComponent(li.id, "/components/features/menu/menu-item/src/index.html", "MenuItem").then(() => {
+            bindMenuItemClick(li.id);
+        });
+    }
+}
+function toggleMenuItems() {
+    isTakeoutMode = !isTakeoutMode;
+    for (let i = 0; i < menuItemCount; i++) {
+        const liId = `MenuItem${i}`;
+        FetchComponent(liId, "/components/features/menu/menu-item/src/index.html", isTakeoutMode ? "TakeoutMenuItem" : "MenuItem").then(() => {
+            bindMenuItemClick(liId);
+        });
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
