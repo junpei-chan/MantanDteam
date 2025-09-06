@@ -68,9 +68,13 @@
 .menu-detail-stepbar div:not(.current):not(.completed) button {
   margin-top: 24px;
 }
+.menu-detail-stepbar div.completed img {
+  display: none;
+}
 .menu-detail-stepbar div.completed button {
   background: #0F57A2;
   border: solid 3px #0F57A2;
+  margin-top: 24px;
 }
 .menu-detail-stepbar div.completed button img {
   display: block;
@@ -190,6 +194,19 @@
   align-items: center;
   justify-content: center;
   width: 120px;
+  height: 60px;
+  background: #3674B5;
+  color: #FCFCFC;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 1px rgba(85, 85, 85, 0.25);
+}
+
+.add-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
   height: 60px;
   background: #3674B5;
   color: #FCFCFC;

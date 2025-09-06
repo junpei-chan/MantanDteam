@@ -1,5 +1,6 @@
 const dialog = document.getElementById("MenuDetailModalContainer") as HTMLDialogElement | null;
 const modalDetailModal = document.querySelector(".menu-detail-modal") as HTMLElement | null;
+const menuDetailStepbarItems = document.querySelector(".menu-detail-stepbar-item") as NodeListOf<HTMLElement> | null;
 const contents = document.querySelectorAll(".content") as NodeListOf<HTMLElement>;
 const closeBtn = document.querySelector(".close-button") as HTMLElement | null;
 const nextBtns = document.querySelectorAll(".next-button");
@@ -13,14 +14,21 @@ if (closeBtn && dialog) {
 
 nextBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    const current = document.querySelector(".content.current") as HTMLElement | null;
+    const currentBtn = document.querySelector(".content.current") as HTMLElement | null;
 
-    if (!current) return;
+    if (!currentBtn) return;
 
-    const next = current.nextElementSibling as HTMLElement | null;
+    const currentItem = document.querySelector(".menu-detail-stepbar-item.current") as HTMLElement | null;
 
+    if (!currentItem) return;
+
+    currentItem.classList.remove("current");
+    currentItem.classList.add("completed");
+    currentItem.nextElementSibling?.classList.add("current");
+
+    const next = currentBtn.nextElementSibling as HTMLElement | null;
     if (next && next.classList.contains("content")) {
-      current.classList.remove("current");
+      currentBtn.classList.remove("current");
       next.classList.add("current");
     }
   });
@@ -28,19 +36,18 @@ nextBtns.forEach(btn => {
 
 backBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    const current = document.querySelector(".content.current") as HTMLElement | null;
+    const currentBtn = document.querySelector(".content.current") as HTMLElement | null;
 
-    if (!current) return;
+    if (!currentBtn) return;
     
-    const prev = current.previousElementSibling as HTMLElement | null;
-
+    const prev = currentBtn.previousElementSibling as HTMLElement | null;
     if (!prev?.classList.contains("content")) {
       dialog?.close();
       return;
     }
 
     if (prev && prev.classList.contains("content")) {
-      current.classList.remove("current");
+      currentBtn.classList.remove("current");
       prev.classList.add("current");
     }
   });
