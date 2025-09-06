@@ -39,6 +39,14 @@ backBtns.forEach(btn => {
     const currentBtn = document.querySelector(".content.current") as HTMLElement | null;
 
     if (!currentBtn) return;
+
+    const currentItem = document.querySelector(".menu-detail-stepbar-item.current") as HTMLElement | null;
+
+    if (!currentItem) return;
+
+    currentItem.classList.remove("current");
+    currentItem.previousElementSibling?.classList.remove("completed");
+    currentItem.previousElementSibling?.classList.add("current");
     
     const prev = currentBtn.previousElementSibling as HTMLElement | null;
     if (!prev?.classList.contains("content")) {

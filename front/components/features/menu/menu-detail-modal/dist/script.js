@@ -32,9 +32,16 @@ nextBtns.forEach(btn => {
 });
 backBtns.forEach(btn => {
     btn.addEventListener("click", () => {
+        var _a, _b;
         const currentBtn = document.querySelector(".content.current");
         if (!currentBtn)
             return;
+        const currentItem = document.querySelector(".menu-detail-stepbar-item.current");
+        if (!currentItem)
+            return;
+        currentItem.classList.remove("current");
+        (_a = currentItem.previousElementSibling) === null || _a === void 0 ? void 0 : _a.classList.remove("completed");
+        (_b = currentItem.previousElementSibling) === null || _b === void 0 ? void 0 : _b.classList.add("current");
         const prev = currentBtn.previousElementSibling;
         if (!(prev === null || prev === void 0 ? void 0 : prev.classList.contains("content"))) {
             dialog === null || dialog === void 0 ? void 0 : dialog.close();
