@@ -9,6 +9,10 @@
   border-radius: 20px;
   padding: 16px 42px 32px 42px;
 }
+.menu-detail-modal.show {
+  opacity: 1;
+  transform: scale(1);
+}
 .menu-detail-modal > div:nth-of-type(1) {
   display: flex;
 }

@@ -22,8 +22,26 @@ dialog {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
-}
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out,
+    overlay 0.3s ease-out allow-discrete,
+    visibility 0.3s ease-out;
 
-dialog:not([open]) {
-  display: none;
+  &[open] {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+    transition:
+      display 0.3s allow-discrete,
+      overlay 0.3s allow-discrete,
+      background-color 0.7s;
+  }
 }

@@ -1,5 +1,6 @@
 "use strict";
 const dialog = document.getElementById("MenuDetailModalContainer");
+const modalDetailModal = document.querySelector(".menu-detail-modal");
 const closeBtn = document.getElementById("closeBtn");
 const backBtn = document.getElementById("backBtn");
 if (closeBtn && dialog) {

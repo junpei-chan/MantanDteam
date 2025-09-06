@@ -1,4 +1,5 @@
 const dialog = document.getElementById("MenuDetailModalContainer") as HTMLDialogElement | null;
+const modalDetailModal = document.querySelector(".menu-detail-modal") as HTMLElement | null;
 const closeBtn = document.getElementById("closeBtn");
 const backBtn = document.getElementById("backBtn");
 
