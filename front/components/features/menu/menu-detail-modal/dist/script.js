@@ -53,3 +53,23 @@ backBtns.forEach(btn => {
         }
     });
 });
+document.querySelectorAll(".options-contents ul li").forEach(li => {
+    const input = li.querySelector("input[type='checkbox']");
+    if (input) {
+        input.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (input.checked) {
+                li.classList.add("checked");
+            }
+            else {
+                li.classList.remove("checked");
+            }
+        });
+        li.addEventListener("click", (e) => {
+            if (e.target === input)
+                return;
+            input.checked = !input.checked;
+            li.classList.toggle("checked", input.checked);
+        });
+    }
+});
