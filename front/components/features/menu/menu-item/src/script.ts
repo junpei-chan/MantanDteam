@@ -1,8 +1,10 @@
 const modal = document.getElementById("MenuDetailModalContainer") as HTMLDialogElement | null;
-const menuItem = document.getElementById("MenuItem") as HTMLDivElement | null;
+const menuItems = document.querySelectorAll<HTMLDivElement>(".menu-item");
 
-if (modal && menuItem) {
-  menuItem.addEventListener("click", () => {
-    modal.showModal();
+if (modal) {
+  menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+      modal.showModal();
+    });
   });
 }

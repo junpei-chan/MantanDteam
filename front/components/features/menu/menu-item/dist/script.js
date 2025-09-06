@@ -1,8 +1,10 @@
 "use strict";
 const modal = document.getElementById("MenuDetailModalContainer");
-const menuItem = document.getElementById("MenuItem");
-if (modal && menuItem) {
-    menuItem.addEventListener("click", () => {
-        modal.showModal();
+const menuItems = document.querySelectorAll(".menu-item");
+if (modal) {
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            modal.showModal();
+        });
     });
 }
