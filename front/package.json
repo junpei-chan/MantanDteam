@@ -8,7 +8,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sh -c 'sass app/templates/*/src:app/templates/*/dist components/features/*/*/src:components/features/*/*/dist'",
     "sass:watch": "sh scripts/watch-all-sass.sh",
     "watch:all-ts": "node scripts/watch-all-ts.js"
   },
