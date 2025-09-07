@@ -371,12 +371,12 @@
 }
 
 .quantities + .menu-detail-buttons {
-  margin-top: 24px;
+  margin-top: 44px;
 }
 .quantities + .menu-detail-buttons > div {
   display: flex;
   gap: 24px;
-  align-items: end;
+  align-items: center;
   color: #131213;
 }
 .quantities + .menu-detail-buttons h2 {
@@ -398,7 +398,7 @@
 .menu-detail-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 60px;
 }
 
 .close-button {
