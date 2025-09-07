@@ -73,3 +73,49 @@ document.querySelectorAll(".options-contents ul li").forEach(li => {
         });
     }
 });
+function updateQuantityButtonDisplay() {
+    document.querySelectorAll(".quantity-button").forEach(quantityButton => {
+        const minusBtn = quantityButton.querySelector('button:first-of-type');
+        const plusBtn = quantityButton.querySelector('button:last-of-type');
+        const quantityP = quantityButton.querySelector('p');
+        if (!minusBtn || !plusBtn || !quantityP)
+            return;
+        const value = parseInt(quantityP.textContent || "1", 10);
+        if (value <= 1) {
+            minusBtn.style.visibility = "hidden";
+            plusBtn.style.visibility = "visible";
+        }
+        else if (value >= 9) {
+            minusBtn.style.visibility = "visible";
+            plusBtn.style.visibility = "hidden";
+        }
+        else {
+            minusBtn.style.visibility = "visible";
+            plusBtn.style.visibility = "visible";
+        }
+    });
+}
+updateQuantityButtonDisplay();
+document.querySelectorAll(".quantity-button").forEach(qb => {
+    const minusBtn = qb.querySelector('button:first-of-type');
+    const plusBtn = qb.querySelector('button:last-of-type');
+    const quantityP = qb.querySelector('p');
+    if (!minusBtn || !plusBtn || !quantityP)
+        return;
+    minusBtn.addEventListener("click", () => {
+        let value = parseInt(quantityP.textContent || "1", 10);
+        if (value > 1) {
+            value--;
+            quantityP.textContent = value.toString();
+            updateQuantityButtonDisplay();
+        }
+    });
+    plusBtn.addEventListener("click", () => {
+        let value = parseInt(quantityP.textContent || "1", 10);
+        if (value < 9) {
+            value++;
+            quantityP.textContent = value.toString();
+            updateQuantityButtonDisplay();
+        }
+    });
+});
