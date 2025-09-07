@@ -100,7 +100,7 @@
 .menu-detail-contents {
   display: flex;
   gap: 76px;
-  margin-top: 20px;
+  margin-top: 36px;
 }
 .menu-detail-contents img {
   width: 420px;
@@ -191,6 +191,7 @@
   border-radius: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   box-sizing: content-box;
+  cursor: pointer;
 }
 .options-contents ul li img {
   width: 100%;
@@ -219,6 +220,7 @@
   background: #FCFCFC;
   border: solid 1px #3B3A3A;
   border-radius: 12px;
+  cursor: pointer;
 }
 .options-contents ul li input:checked {
   background: #3B3A3A;
@@ -261,6 +263,130 @@
   gap: 8px;
 }
 .menu-title span {
+  color: #4F4E4E;
+}
+
+/* ==========　↓ step3 ↓ ========== */
+.quantities {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.menu-contents {
+  width: 464px;
+  height: fit-content;
+  background: #E8E8E8;
+  padding: 14px 16px;
+  border-radius: 16px;
+}
+.menu-contents > img {
+  width: 432px;
+  height: auto;
+  border-radius: 8px;
+}
+.menu-contents .menu-name {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #131213;
+}
+.menu-contents .menu-name > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.menu-contents .menu-name span {
+  font-size: 14px;
+  color: #3B3A3A;
+}
+
+.quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 120px;
+  height: 36px;
+  background: #D2D2D2;
+  border-radius: 18px;
+}
+.quantity-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #0F57A2;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #131213;
+}
+
+.selected-options {
+  width: 432px;
+  color: #131213;
+}
+.selected-options h2 {
+  font-size: 24px;
+  padding: 4px 0 20px 24px;
+}
+.selected-options ul {
+  height: 280px;
+  border-top: solid 1px #B1B1B1;
+  overflow-y: scroll;
+}
+.selected-options li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  height: 128px;
+  background: #FCFCFC;
+  padding: 20px 24px;
+  border-bottom: solid 1px #B1B1B1;
+}
+.selected-options li > div {
+  display: flex;
+}
+
+.option-name {
+  gap: 24px;
+}
+
+.option-buttons {
+  justify-content: space-between;
+}
+.option-buttons > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 36px;
+  background: #FCFCFC;
+  border: solid 1.5px #131213;
+  border-radius: 18px;
+}
+
+.quantities + .menu-detail-buttons {
+  margin-top: 24px;
+}
+.quantities + .menu-detail-buttons > div {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+  color: #131213;
+}
+.quantities + .menu-detail-buttons h2 {
+  font-size: 24px;
+}
+.quantities + .menu-detail-buttons h1 {
+  font-size: 32px;
+}
+.quantities + .menu-detail-buttons span {
+  font-size: 20px;
   color: #4F4E4E;
 }
 
