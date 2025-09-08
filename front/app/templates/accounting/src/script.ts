@@ -1,0 +1,1 @@
+import { FetchComponent } from "../../../utils/dist/fetch-component.js";
