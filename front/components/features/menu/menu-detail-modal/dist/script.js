@@ -39,7 +39,7 @@ nextBtns.forEach(btn => {
                 closeBtn.remove();
         }
         if (!next) {
-            const stepbar = document.querySelector("menu-detail-stepbar");
+            const stepbar = document.querySelector(".menu-detail-stepbar");
             if (stepbar) {
                 stepbar.style.display = "none";
             }

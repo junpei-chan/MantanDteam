@@ -2,6 +2,46 @@ const modal = document.getElementById("MenuDetailModalContainer") as HTMLDialogE
 const menuItems = document.querySelectorAll<HTMLDivElement>(".menu-item");
 
 function resetMenuDetailModal() {
+  let stepbar = document.querySelector<HTMLElement>(".menu-detail-stepbar");
+  
+  if (!stepbar) {
+    const stepbarContainer = document.querySelector('.menu-detail-modal > div');
+    if (stepbarContainer) {
+      stepbarContainer.insertAdjacentHTML('afterbegin', `
+        <div class="menu-detail-stepbar">
+          <div class="menu-detail-stepbar-item current">
+            <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
+            <button id="menuSelect">
+              <span>1</span>
+              <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+            </button>
+            <label for="menuSelect">メニュー選択</label>
+          </div>
+          <div class="menu-detail-stepbar-item">
+            <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
+            <button id="optionSelect">
+              <span>2</span>
+              <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+            </button>
+            <label for="optionSelect">オプション選択</label>
+          </div>
+          <div class="menu-detail-stepbar-item">
+            <img src="/assets/images/icons/bottom-arrow-icon.svg" alt="arrow-icon">
+            <button id="quantitySelect">
+              <span>3</span>
+              <img src="/assets/images/icons/check-icon.svg" alt="check-icon">
+            </button>
+            <label for="quantitySelect">数量選択</label>
+          </div>
+        </div>
+      `);
+    }
+    stepbar = document.querySelector<HTMLElement>(".menu-detail-stepbar");
+  }
+  if (stepbar) {
+    stepbar.style.display = "";
+  }
+
   const stepbarItems = document.querySelectorAll<HTMLElement>(".menu-detail-stepbar-item");
   stepbarItems.forEach((item, idx) => {
     item.classList.remove("current", "completed");

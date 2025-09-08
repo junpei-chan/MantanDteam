@@ -43,7 +43,7 @@ nextBtns.forEach(btn => {
     }
 
     if (!next) {
-      const stepbar = document.querySelector("menu-detail-stepbar") as HTMLElement | null;
+      const stepbar = document.querySelector(".menu-detail-stepbar") as HTMLElement | null;
       if (stepbar) {
         stepbar.style.display = "none";
       }
