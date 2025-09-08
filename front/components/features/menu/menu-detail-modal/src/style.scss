@@ -450,6 +450,55 @@
   }
 }
 
+/* added */
+
+.added {
+  margin-top: 112px;
+
+  .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    height: 144px;
+    background: $main-dark-color;
+    border-radius: 72px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: $h1;
+    color: $black-color;
+    text-align: center;
+    margin: 48px auto 80px auto;
+  }
+}
+
+.added-buttons {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: fit-content;
+  margin: 0 auto;
+
+  button {
+    display: flex;
+    justify-content: center;
+    width: 256px;
+    padding: 20px 0;
+    font-size: $h3;
+    color: $black-color;
+    background: $white-color;
+    box-shadow: $drop-shadow-bottom__dark;
+    border-radius: 12px;
+
+    &:nth-of-type(2) {
+      background: $main-color;
+      color: $white-color;
+    }
+  }
+}
+
 /*  
   components内から別のコンポーネントを呼び出せなかったので、ここにボタンのスタイル書いてます
 

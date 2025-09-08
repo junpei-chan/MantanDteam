@@ -24,6 +24,20 @@ nextBtns.forEach(btn => {
         currentItem.classList.add("completed");
         (_a = currentItem.nextElementSibling) === null || _a === void 0 ? void 0 : _a.classList.add("current");
         const next = currentBtn.nextElementSibling;
+        if (next && next.classList.contains("added")) {
+            const stepbar = document.querySelector(".menu-detail-stepbar");
+            if (stepbar)
+                stepbar.remove();
+            const closeBtn = document.querySelector(".close-button");
+            if (closeBtn)
+                closeBtn.remove();
+        }
+        if (!next) {
+            const stepbar = document.querySelector("menu-detail-stepbar");
+            if (stepbar) {
+                stepbar.style.display = "none";
+            }
+        }
         if (next && next.classList.contains("content")) {
             currentBtn.classList.remove("current");
             next.classList.add("current");
