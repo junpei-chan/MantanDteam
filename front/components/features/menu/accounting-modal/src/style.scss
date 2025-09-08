@@ -1,0 +1,12 @@
+@import "../../../../../app/templates/_variables";
+
+.accounting-modal {
+  width: 1000px;
+  height: 600px;
+  background: $white-color;
+  border-radius: 20px;
+  
+  h1 {
+    margin-top: 216px;
+  }
+}

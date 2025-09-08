@@ -7,11 +7,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-  <link rel="stylesheet" href="/components/shared/button/accounting/dist/style.css">
-  <script type="module" src="/components/shared/button/accounting/dist/script.js" ></script>
+  <link rel="stylesheet" href="/components/features/menu/accounting-modal/dist/style.css">
+  <script type="module" src="/components/features/menu/accounting-modal/dist/script.js"></script>
   <title>マンタン</title>
 </head>
 <body>
-  <button class="accounting-button" id="AccountingBtn">お会計</button>
+  <div class="accounting-modal" id="accountingModal">
+    <h1>お会計へ進んでもよろしいですか？</h1>
+    <div>
+      <button>もどる</button>
+      <button>会計へ進む</button>
+    </div>
+  </div>
 </body>
 </html>

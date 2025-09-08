@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.accounting-modal {
+  width: 1000px;
+  height: 600px;
+  background: #FCFCFC;
+  border-radius: 20px;
+}
+.accounting-modal h1 {
+  margin-top: 216px;
+}
+
+/*# sourceMappingURL=style.css.map */

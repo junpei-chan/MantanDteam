@@ -85,6 +85,26 @@ FetchComponent(
   }
 });
 
+FetchComponent(
+  "AccountingModalContainer", 
+  "/components/features/menu/accounting-modal/src/index.html", 
+  "accountingModal"
+).then(() => {
+  const dialog = document.getElementById("AccountingModalContainer") as HTMLDialogElement | null;
+  
+  if (dialog && typeof dialog.showModal === "function") {
+    dialog.close();
+  }
+
+  if (dialog) {
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) {
+        dialog.close();
+      }
+    });
+  }
+});
+
 
 FetchComponent(
   "AccountingBtnContainer", 
