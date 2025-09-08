@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.call-modal {
+  width: 1000px;
+  height: 600px;
+  background: #FCFCFC;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

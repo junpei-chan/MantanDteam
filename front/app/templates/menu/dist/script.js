@@ -71,8 +71,29 @@ FetchComponent("AccountingModalContainer", "/components/features/menu/accounting
         });
     }
 });
+Promise.all([
+    FetchComponent("CallModalContainer", "/components/features/menu/call-modal/src/index.html", "callModal"),
+    FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn")
+]).then(() => {
+    const dialog = document.getElementById("CallModalContainer");
+    if (dialog && typeof dialog.showModal === "function") {
+        dialog.close();
+    }
+    if (dialog) {
+        dialog.addEventListener("click", (e) => {
+            if (e.target === dialog) {
+                dialog.close();
+            }
+        });
+    }
+    const btn = document.getElementById("CallBtn");
+    if (btn && dialog) {
+        btn.addEventListener("click", () => {
+            dialog.showModal();
+        });
+    }
+});
 FetchComponent("AccountingBtnContainer", "/components/shared/button/accounting/src/index.html", "AccountingBtn");
-FetchComponent("CallBtnContainer", "/components/shared/button/call/src/index.html", "CallBtn");
 FetchComponent("OrderBtnContainer", "/components/shared/button/order/src/index.html", "OrderBtn");
 FetchComponent("OrderHistoryBtnContainer", "/components/shared/button/order-history/src/index.html", "OrderHistoryBtn");
 FetchComponent("CategoryMenuContainer", "/components/features/menu/category-menu/src/index.html", "CategoryMenu");
