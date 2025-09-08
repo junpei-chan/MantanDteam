@@ -9,7 +9,32 @@
   border-radius: 20px;
 }
 .accounting-modal h1 {
-  margin-top: 216px;
+  font-size: 32px;
+  color: #131213;
+  text-align: center;
+  margin: 216px auto 72px auto;
+}
+
+.accounting-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  font-size: 24px;
+  color: #131213;
+}
+.accounting-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 256px;
+  height: 72px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+.accounting-buttons button:nth-of-type(2) {
+  color: #FCFCFC;
+  background: #3674B5;
 }
 
 /*# sourceMappingURL=style.css.map */
