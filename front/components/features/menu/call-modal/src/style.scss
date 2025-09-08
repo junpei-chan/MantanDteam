@@ -5,4 +5,48 @@
   height: 600px;
   background: $white-color;
   border-radius: 20px;
+
+  h1 {
+    font-size: $h1;
+    color: $black-color;
+    text-align: center;
+    margin-top: 96px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 256px;
+    height: 72px;
+    background: $white-color;
+    box-shadow: $drop-shadow-bottom__dark;
+    border-radius: 12px;
+    color: $black-color;
+    font-size: $h2;
+    margin: 64px auto 0 auto;
+  }
+}
+
+.call-buttons {
+  display: flex;
+  gap: 56px;
+  justify-content: center;
+  margin-top: 48px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 240px;
+    background: $main-light-color;
+    color: $white-color;
+    font-size: $h2;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 20px;
+    box-shadow: $drop-shadow-bottom__dark;
+    cursor: pointer;
+  }
 }
