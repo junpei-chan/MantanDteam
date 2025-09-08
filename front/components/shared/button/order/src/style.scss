@@ -1,9 +1,6 @@
 @import "../../../../../app/templates/variables";
 
 .order-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 168px;
   height: 60px;
   background: $accent-color;
@@ -11,4 +8,12 @@
   font-size: $normal;
   border-radius: 8px;
   box-shadow: $drop-shadow-small;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
 }
