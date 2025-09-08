@@ -13,16 +13,27 @@
 </head>
 <body>
   <div class="call-modal" id="callModal">
-    <h1>店員呼び出しメニュー</h1>
-    <div class="call-buttons">
-      <div>
-        <p>注文した料理に<br>髪の毛が入っていた</p>
+    <!-- call -->
+    <div class="call">
+      <h1>店員呼び出しメニュー</h1>
+      <div class="call-buttons">
+        <button>
+          注文した料理に<br>髪の毛が入っていた
+        </button>
+        <button>
+          シェフを呼んでくれ
+        </button>
       </div>
-      <div>
-        <p>シェフを呼んでくれ</p>
-      </div>
+      <button id="cancelBtn">キャンセル</button>
     </div>
-    <button id="cancelBtn">キャンセル</button>
+    <!-- standby -->
+    <div class="standby">
+      <div class="standby-text">
+        <p>ただいま、スタッフをお呼びしております</p>
+        <p>しばらくお待ちください</p>
+      </div>
+      <img src="/assets/images/staff.png" alt="staff-image">
+    </div>
   </div>
 </body>
 </html>

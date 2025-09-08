@@ -14,7 +14,7 @@
   text-align: center;
   margin-top: 96px;
 }
-.call-modal button {
+.call-modal .call > button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +34,7 @@
   justify-content: center;
   margin-top: 48px;
 }
-.call-buttons div {
+.call-buttons button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,33 @@
   border-radius: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+.standby {
+  display: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.standby img {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  height: auto;
+}
+
+.standby-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 240px;
+}
+.standby-text p {
+  font-size: 32px;
+  color: #131213;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
