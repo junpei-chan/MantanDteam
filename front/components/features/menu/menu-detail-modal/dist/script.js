@@ -6,8 +6,14 @@ const contents = document.querySelectorAll(".content");
 const closeBtn = document.querySelector(".close-button");
 const nextBtns = document.querySelectorAll(".next-button");
 const backBtns = document.querySelectorAll(".back-button");
+const moreBtn = document.querySelector(".morebutton");
 if (closeBtn && dialog) {
     closeBtn.addEventListener("click", () => {
+        dialog.close();
+    });
+}
+if (moreBtn && dialog) {
+    moreBtn.addEventListener("click", () => {
         dialog.close();
     });
 }

@@ -5,12 +5,19 @@ const contents = document.querySelectorAll(".content") as NodeListOf<HTMLElement
 const closeBtn = document.querySelector(".close-button") as HTMLElement | null;
 const nextBtns = document.querySelectorAll(".next-button");
 const backBtns = document.querySelectorAll(".back-button");
+const moreBtn = document.querySelector(".morebutton") as HTMLElement | null;
 
 if (closeBtn && dialog) {
   closeBtn.addEventListener("click", () => {
     dialog.close();
   });
 }
+
+if (moreBtn && dialog) {
+  moreBtn.addEventListener("click", () => {
+    dialog.close();
+  });
+} 
 
 nextBtns.forEach(btn => {
   btn.addEventListener("click", () => {
