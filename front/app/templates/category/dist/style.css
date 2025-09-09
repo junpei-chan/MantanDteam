@@ -23,7 +23,7 @@
   height: 200px;
   color: #FCFCFC;
   font-size: 32px;
-  background: url("../../../../assets/images/category/category-launch.png") no-repeat center center; /* 背景は仮で全てランチの画像 */
+  background: url("../../../../assets/images/category/category-launch.png") no-repeat center center;
   border-radius: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
@@ -31,6 +31,18 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+.category-items li.all {
+  background: url("../../../../assets/images/category/category-all.png") no-repeat center center;
+}
+.category-items li.set {
+  background: url("../../../../assets/images/category/category-set.png") no-repeat center center;
+}
+.category-items li.kids {
+  background: url("../../../../assets/images/category/category-kids.png") no-repeat center center;
+}
+.category-items li.desert {
+  background: url("../../../../assets/images/category/category-desert.png") no-repeat center center;
 }
 
 .category-item-title {

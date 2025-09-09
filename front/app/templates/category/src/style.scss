@@ -21,7 +21,7 @@
     height: 200px;
     color: $white-color;
     font-size: $h1;
-    background: url("../../../../assets/images/category/category-launch.png") no-repeat center center; /* 背景は仮で全てランチの画像 */
+    background: url("../../../../assets/images/category/category-launch.png") no-repeat center center;
     border-radius: 20px;
     box-shadow: $drop-shadow-bottom__dark;
 
@@ -29,6 +29,22 @@
       display: block;
       width: 100%;
       height: 100%;
+    }
+
+    &.all {
+      background: url("../../../../assets/images/category/category-all.png") no-repeat center center;
+    }
+
+    &.set {
+      background: url("../../../../assets/images/category/category-set.png") no-repeat center center;
+    }
+
+    &.kids {
+      background: url("../../../../assets/images/category/category-kids.png") no-repeat center center;
+    }
+
+    &.desert {
+      background: url("../../../../assets/images/category/category-desert.png") no-repeat center center;
     }
   }
 }
