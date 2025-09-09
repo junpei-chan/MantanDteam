@@ -7,7 +7,7 @@ Promise.all([
     "callModal"
   ),
   FetchComponent(
-    "callBtnContainer", 
+    "CallBtnContainer", 
     "/components/shared/button/call/src/index.html", 
     "CallBtn"
   )
@@ -18,17 +18,13 @@ Promise.all([
   }
   if (dialog) {
     dialog.addEventListener("click", (e) => {
-      if (e.target === dialog) {
-        dialog.close();
-      }
+      if (e.target === dialog) dialog.close();
     });
   }
 
-  const btn = document.getElementById("CallBtn") as HTMLElement | null;
-  if (btn && dialog) {
-    btn.addEventListener("click", () => {
-      dialog.showModal();
-    });
+  const btn = document.getElementById("CallBtn");
+  if (btn instanceof HTMLElement && dialog) {
+    btn.addEventListener("click", () => dialog.showModal());
   }
 });
 
@@ -63,3 +59,33 @@ FetchComponent(
   "/components/shared/button/accounting/src/index.html", 
   "AccountingBtn"
 );
+
+FetchComponent(
+  "orderDeleteModalContainer", 
+  "/components/features/order/order-delete-modal/src/index.html", 
+  "orderDeleteModal"
+).then(() => {
+  const dialog = document.getElementById("orderDeleteModalContainer") as HTMLDialogElement | null;
+
+  document.addEventListener("click", (e) => {
+    if (!dialog) return;
+    const target = e.target as Element | null;
+    if (target && target.closest && target.closest(".delete-button")) {
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      }
+    }
+  });
+
+  if (dialog && typeof dialog.showModal === "function") {
+    dialog.close();
+  }
+
+  if (dialog) {
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) {
+        dialog.close();
+      }
+    });
+  }
+});

@@ -1,0 +1,57 @@
+@import "../../../../../app/templates/_variables";
+
+.order-delete-modal {
+  width: 1000px;
+  height: 600px;
+  background: $white-color;
+  border-radius: 20px;
+
+  .text {
+    font-size: $h1;
+    color: $black-color;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 48px;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 40px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 256px;
+      height: 72px;
+      font-size: $h2;
+      color: $black-color;
+      box-shadow: $drop-shadow-bottom__dark;
+      border-radius: 12px;
+
+      &:nth-of-type(2) {
+        background: $main-color;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.delete-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 144px;
+  background: $main-dark-color;
+  border-radius: 72px;
+  margin: 112px auto 0 auto;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}

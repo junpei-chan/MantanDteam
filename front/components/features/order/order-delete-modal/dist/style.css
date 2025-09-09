@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* ========== ↓ カラー ↓ ========== */
+/* ========== ↓ フォントサイズ ↓ ========== */
+/* ========== ↓ ドロップシャドウ ↓ ========== */
+.order-delete-modal {
+  width: 1000px;
+  height: 600px;
+  background: #FCFCFC;
+  border-radius: 20px;
+}
+.order-delete-modal .text {
+  font-size: 32px;
+  color: #131213;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 48px;
+}
+.order-delete-modal .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 40px;
+}
+.order-delete-modal .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 256px;
+  height: 72px;
+  font-size: 24px;
+  color: #131213;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+.order-delete-modal .buttons button:nth-of-type(2) {
+  background: #3674B5;
+  color: #FCFCFC;
+}
+
+.delete-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 144px;
+  background: #0F57A2;
+  border-radius: 72px;
+  margin: 112px auto 0 auto;
+}
+.delete-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+/*# sourceMappingURL=style.css.map */
