@@ -89,3 +89,22 @@ FetchComponent(
     });
   }
 });
+
+const submitBtn = document.getElementById("submitBtn") as HTMLButtonElement | null;
+const contents = document.querySelector(".contents") as HTMLDivElement | null;
+const completed = document.querySelector(".completed") as HTMLDivElement | null;
+
+if (submitBtn && contents && completed) {
+  submitBtn.addEventListener("click", () => {
+    contents.style.display = "none";
+    completed.style.display = "flex";
+
+    setTimeout(() => {
+      document.body.classList.add("fade-out");
+
+      document.body.addEventListener("animationend", () => {
+        window.location.href = "../../menu/src/index.html";
+      }, { once: true });
+    }, 1000);
+  });
+}

@@ -1,5 +1,7 @@
 @import "../../_variables";
 
+/* ========== ↓ contents ↓ ========== */
+
 .order-history {
   width: calc(100vw - 40px);
   margin: 0 auto;
@@ -230,5 +232,35 @@
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+}
+
+/* ========== ↓ completed ↓ ========== */
+
+.completed {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 184px;
+
+  h1 {
+    font-size: $h1;
+    color: $black-color;
+  }
+
+  img {
+    width: 368px;
+    height: 560px;
+    margin-top: 16px;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.7s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
   }
 }
