@@ -484,8 +484,9 @@
   button {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 256px;
-    padding: 20px 0;
+    height: 72px;
     font-size: $h3;
     color: $black-color;
     background: $white-color;
@@ -495,6 +496,14 @@
     &:nth-of-type(2) {
       background: $main-color;
       color: $white-color;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
